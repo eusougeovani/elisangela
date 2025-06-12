@@ -4,7 +4,6 @@ body {
   color: white;
   font-family: 'Roboto', sans-serif;
 }
-
 svg {
   overflow: visible;
 }
@@ -25,7 +24,6 @@ svg path#heart {
   transform-origin: 50% 50%;
   animation: blink 4s linear infinite;
 }
-
 @keyframes dash {
   0% {
     stroke-dashoffset: 1;
@@ -37,7 +35,6 @@ svg path#heart {
     stroke-dashoffset: 0;
   }
 }
-
 @keyframes blink {
   0% {
     opacity: 0;
@@ -68,7 +65,6 @@ svg path#heart {
     transform: scale(1.0);
   }
 }
-
 header {
   display: flex;
   justify-content: space-between;
@@ -79,7 +75,6 @@ header {
   flex-direction: row;
   gap: 1rem;
 }
-
 .logo {
   width: 150px;      /* ajuste o tamanho conforme desejar */
   height: auto;
@@ -88,7 +83,6 @@ header {
   min-width: 80px;
   max-width: 180px;
 }
-
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -96,7 +90,6 @@ nav {
   justify-content: center;
   margin-top: 0.5rem;
 }
-
 nav a {
   color: white;
   font-weight: bold;
@@ -108,12 +101,10 @@ nav a {
   margin-left: 0;
   margin-right: 1rem;
 }
-
 nav a:hover {
   color: #e50914;
   transform: scale(1.05);
 }
-
 /* Centraliza o conteúdo do main */
 main {
   display: flex;
@@ -122,7 +113,6 @@ main {
   justify-content: center;
   min-height: 70vh;
 }
-
 /* Ajustes para telas pequenas */
 @media (max-width: 600px) {
   header {
@@ -151,7 +141,6 @@ main {
     max-height: 30vh;
   }
 }
-
 .cronometro {
   text-align: center;
   font-size: 2rem;
@@ -164,7 +153,6 @@ main {
   font-family: 'Roboto', 'Short Stack', cursive, sans-serif;
   letter-spacing: 1px;
 }
-
 .cartinha {
   max-width: 480px;
   margin: 2rem auto;
@@ -180,7 +168,6 @@ main {
   letter-spacing: 0.5px;
   position: relative;
 }
-
 .cartinha::before {
   content: "💌";
   font-size: 2.2rem;
@@ -193,7 +180,6 @@ main {
   padding: 0.2rem 0.7rem;
   border: 2px solid #e50914;
 }
-
 .cartinha::after {
   content: "";
   display: block;
@@ -203,7 +189,6 @@ main {
   background: linear-gradient(90deg, transparent, #e50914 60%, transparent);
   border-radius: 1px;
 }
-
 /* Animação interativa do "I love you" */
 @-webkit-keyframes throb{
   0%{ -webkit-transform: scale(1);}
@@ -215,14 +200,12 @@ main {
   35% { transform: scale(1.2);}
   85% { transform: scale(1);}
 }
-
 .wrapper {
   width: 90vmin;
   height: 90vmin;
   position: relative;
   margin: 5vmin auto;
 }
-
 div.throb {
   -webkit-animation: throb 0.5s infinite;
   animation: throb 0.5s infinite;
@@ -293,4 +276,50 @@ span {
   margin-bottom: -3vmin;
   font-size: 6vmin;
   color: #999;
+}
+.youtube-playlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem auto 2rem auto;
+  padding: 1.5rem 0;
+  background: linear-gradient(135deg, #1a1a1a 80%, #e50914 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(229,9,20,0.10), 0 1.5px 0 #e50914 inset;
+  max-width: 650px;
+}
+
+.youtube-playlist iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 12px;
+  border: 3px solid #e50914;
+  background: #000;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  margin: 0 auto;
+  display: block;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 700px) {
+  .youtube-playlist {
+    padding: 1rem 0.2rem;
+    max-width: 98vw;
+  }
+  .youtube-playlist iframe {
+    max-width: 98vw;
+    height: 56vw; /* 16:9 ratio */
+    min-height: 180px;
+  }
+}
+.playlist-title {
+  color: #fff;
+  font-family: 'Short Stack', 'Roboto', cursive, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #e50914;
 }
